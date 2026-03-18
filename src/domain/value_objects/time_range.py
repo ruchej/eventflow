@@ -25,3 +25,7 @@ class TimeRange:
     def __post_init__(self) -> None:
         if self.to <= self.from_:
             raise ValueError("Значение периода to должно быть больше from_")
+
+    def __contains__(self, dt: datetime) -> bool:
+        """Поддержка оператора in."""
+        return self.from_ <= dt <= self.to

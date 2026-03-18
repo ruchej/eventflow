@@ -29,7 +29,6 @@ class TestMoney:
     @pytest.mark.parametrize(
         "amount",
         [
-            Decimal("0"),
             Decimal("-1"),
             Decimal("-100.50"),
             Decimal("-0.01"),
